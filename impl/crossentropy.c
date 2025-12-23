@@ -1,4 +1,4 @@
-#include "crossentropy.h"
+#include "much/crossentropy.h"
 #include <math.h>
 
 void softmax(tensor_f32_t* out, tensor_f32_t* in) {

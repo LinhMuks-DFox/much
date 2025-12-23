@@ -1,4 +1,4 @@
-#include "sequence.h"
+#include "much/sequence.h"
 #include <stdlib.h>
 
 sequence_t* new_sequence() {

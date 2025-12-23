@@ -2,6 +2,13 @@
 
 `much` is a small, educational deep learning framework written from scratch in C. It is designed to be simple and easy to understand, while still being powerful enough to train a simple neural network on the MNIST dataset.
 
+```
+include/much/   # Public headers
+impl/           # Core library sources
+src/            # Executables (currently the MNIST demo)
+data/           # MNIST IDX files and generated weights (gitignored)
+```
+
 ## Features
 
 *   **Dynamic Computation Graph:** `much` builds a dynamic computation graph, allowing for flexibility in network architecture.
@@ -29,11 +36,14 @@
 
 2.  **Download the MNIST dataset:**
     ```bash
+    mkdir -p data
+    pushd data
     wget https://raw.githubusercontent.com/fgnt/mnist/master/train-images-idx3-ubyte.gz \
          https://raw.githubusercontent.com/fgnt/mnist/master/train-labels-idx1-ubyte.gz \
          https://raw.githubusercontent.com/fgnt/mnist/master/t10k-images-idx3-ubyte.gz \
          https://raw.githubusercontent.com/fgnt/mnist/master/t10k-labels-idx1-ubyte.gz
     gunzip *.gz
+    popd
     ```
 
 3.  **Build the project:**

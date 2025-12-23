@@ -1,5 +1,5 @@
 #pragma once
-#include "tensor.h"
+#include "much/tensor.h"
 
 typedef struct {
     tensor_f32_t** images;

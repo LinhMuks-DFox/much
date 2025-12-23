@@ -1,4 +1,4 @@
-#include "tensor.h"
+#include "much/tensor.h"
 #ifdef __APPLE__
 #include <Accelerate/Accelerate.h>
 #else
@@ -119,8 +119,8 @@ void tensor_f32_randn(tensor_f32_t *self, float mean, float std) {
     raise_error(NullPointer, "tensor or tensor data is NULL");
   }
   for (uint64_t i = 0; i < self->meta.capacity; i += 2) {
-    float u1 = (float)rand() / RAND_MAX;
-    float u2 = (float)rand() / RAND_MAX;
+    float u1 = (float)rand() / (float)RAND_MAX;
+    float u2 = (float)rand() / (float)RAND_MAX;
     float z1 = sqrtf(-2.0f * logf(u1)) * cosf(2.0f * M_PI * u2);
     float z2 = sqrtf(-2.0f * logf(u1)) * sinf(2.0f * M_PI * u2);
     self->data[i] = z1 * std + mean;

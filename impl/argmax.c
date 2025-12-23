@@ -1,4 +1,4 @@
-#include "argmax.h"
+#include "much/argmax.h"
 
 uint64_t argmax(float* data, uint64_t len) {
     if (len == 0) {

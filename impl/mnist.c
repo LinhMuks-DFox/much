@@ -1,4 +1,4 @@
-#include "mnist.h"
+#include "much/mnist.h"
 #include <stdio.h>
 #include <stdlib.h>
 
